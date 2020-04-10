@@ -10,13 +10,13 @@
 		model = unet_model()
 		model.load_weights('/home/weights-full-best.h5')
 	```
-```python
-model_core = unet_model_nec3()
-model_core.load_weights('/home/weights-core-best.h5')
-model_ET = unet_model_nec3()
-model_ET.load_weights('/home/weights-ET-best.h5')
-```
-1. The python file contains code to automatically fetch the BRATS Brain IMage Dataset. You have to change the path in code to a destination of your local disk.
+        ```python
+		model_core = unet_model_nec3()
+		model_core.load_weights('/home/weights-core-best.h5')
+		model_ET = unet_model_nec3()
+		model_ET.load_weights('/home/weights-ET-best.h5')
+	```
+3. The python file contains code to automatically fetch the BRATS Brain IMage Dataset. You have to change the path in code to a destination of your local disk.
 ```python
 import os
 if not (os.path.exists('MICCAI_BraTS_2018_Data_Training.zip') or os.path.exists('/home/data/HGG/')):
@@ -25,12 +25,12 @@ if not (os.path.exists('MICCAI_BraTS_2018_Data_Training.zip') or os.path.exists(
         os.makedirs("/home/data/")
     !unzip "MICCAI_BraTS_2018_Data_Training.zip" -d "/home/data/"
 ```
-1. Change the path in code to point the above fetched dataset in the "Training" part of code.
+4. Change the path in code to point the above fetched dataset in the "Training" part of code.
 ```python
 pul_seq = 'flair'
 Flair = create_data_onesubject_val('/home/data/HGG/', '**/*{}.nii.gz'.format(pul_seq), count, label=False)
 ```
-1.   ####One has to install certain libraries for the proper functioning of the code:
+5.   ####One has to install certain libraries for the proper functioning of the code:
 	1. Tensorflow
 	2. numpy
 	3. matplotlib
