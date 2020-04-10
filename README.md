@@ -10,12 +10,13 @@
 		model = unet_model()
 		model.load_weights('/home/weights-full-best.h5')
 	```
+	
         ```python
 		model_core = unet_model_nec3()
 		model_core.load_weights('/home/weights-core-best.h5')
 		model_ET = unet_model_nec3()
 		model_ET.load_weights('/home/weights-ET-best.h5')
-	```
+	 ```
 3. The python file contains code to automatically fetch the BRATS Brain IMage Dataset. You have to change the path in code to a destination of your local disk.
 ```python
 import os
