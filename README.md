@@ -7,9 +7,9 @@
 	2. weights-ET-best.h5
 	3. weights-full-best.h5
 	```python
-model = unet_model()
-model.load_weights('/home/weights-full-best.h5')
-```
+		model = unet_model()
+		model.load_weights('/home/weights-full-best.h5')
+	```
 ```python
 model_core = unet_model_nec3()
 model_core.load_weights('/home/weights-core-best.h5')
